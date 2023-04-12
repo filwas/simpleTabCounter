@@ -7,3 +7,4 @@ To install:
   2. in Chrome, go into options (three dots in top-right corner), then "More Tools" -> "Extensions"
   3. if it's not already turned on, click "developer mode" in top right corner
   4. click "load unpacked" and select the folder where you unpacked the code
+  5. don't forget to pin the extension to your taskbar
