@@ -1,4 +1,4 @@
-async function tabUpdate() {
+function tabUpdate() {
     chrome.tabs.query({currentWindow: true}).then(
         (fulfill) => chrome.action.setBadgeText({text: fulfill.length.toString()})
     )
