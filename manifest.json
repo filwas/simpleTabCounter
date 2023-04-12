@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "simpleTabCounter",
+  "version": "1.0",
+  "description": "Simply tells you how many tabs are open in current window.",
+  "icons": {
+    "16": "images/tabIcon16.png",
+    "32": "images/tabIcon32.png",
+    "48": "images/tabIcon48.png",
+    "128": "images/tabIcon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "simpleTabCounter"
+  },
+  "permissions": [
+    "tabs",
+    "storage"
+  ]
+}
