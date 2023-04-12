@@ -16,7 +16,6 @@
     "default_title": "simpleTabCounter"
   },
   "permissions": [
-    "tabs",
-    "storage"
+    "tabs"
   ]
 }
