@@ -9,4 +9,4 @@ chrome.tabs.onCreated.addListener(() => tabUpdate());
 chrome.tabs.onRemoved.addListener(() => tabUpdate());
 chrome.windows.onCreated.addListener(() => tabUpdate());
 chrome.windows.onRemoved.addListener(() => tabUpdate());
-
+chrome.windows.onFocusChanged.addListener(() => tabUpdate());
