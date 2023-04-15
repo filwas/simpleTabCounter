@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "simpleTabCounter",
-  "version": "1.0",
-  "description": "Simply tells you how many tabs are open in current window.",
+  "version": "1.1",
+  "description": "Simply tells you how many tabs are open in current window. Also, now it can click some buttons!",
   "icons": {
     "16": "images/tabIcon16.png",
     "32": "images/tabIcon32.png",
@@ -16,6 +16,12 @@
     "default_title": "simpleTabCounter"
   },
   "permissions": [
-    "tabs"
+    "tabs",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://cockpit-sta.airhelp.com/*",
+    "*://cockpit.airhelp.com/*"
   ]
 }
