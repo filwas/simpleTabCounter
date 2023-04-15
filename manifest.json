@@ -21,7 +21,6 @@
     "activeTab"
   ],
   "host_permissions": [
-    "*://cockpit-sta.airhelp.com/*",
     "*://cockpit.airhelp.com/*"
   ]
 }

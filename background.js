@@ -1,3 +1,4 @@
+//this function updates action button badge text
 function tabUpdate() {
     chrome.tabs.query({currentWindow: true}).then(
         (fulfill) => chrome.action.setBadgeText({text: fulfill.length.toString()})
@@ -44,7 +45,7 @@ function buttonClicker(){
     );
 }
 
-
+//this is just a bunch of listeners, that make the extension update the action button badge at basically every opportunity
 tabUpdate();
 chrome.action.onClicked.addListener(() => buttonClicker());  
 chrome.tabs.onCreated.addListener(() => tabUpdate());
