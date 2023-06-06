@@ -45,6 +45,8 @@ function buttonClicker(){
     );
 }
 
+
+
 //this is just a bunch of listeners, that make the extension update the action button badge at basically every opportunity
 tabUpdate();
 chrome.action.onClicked.addListener(() => buttonClicker());  
@@ -58,3 +60,14 @@ chrome.tabs.onMoved.addListener(() => tabUpdate());
 chrome.windows.onCreated.addListener(() => tabUpdate());
 chrome.windows.onRemoved.addListener(() => tabUpdate());
 chrome.windows.onFocusChanged.addListener(() => tabUpdate());
+
+
+chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
+    if (changeInfo.status == "complete") {
+        chrome.scripting.executeScript({
+            target: {tabId: tabId},
+            files: ['contentScript.js']
+        });
+    }
+  });
+  
