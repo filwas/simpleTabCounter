@@ -2,7 +2,8 @@ document.addEventListener('paste', (event)=>{
     let amount = event.clipboardData.getData('text/plain').match(/\d+\.\d{2}$/)[0];
     let lastQuerableElement = document.querySelector("#main-content > div:nth-child(6) > div > div:nth-child(1) > div");
     let inputElement = lastQuerableElement.childNodes[3].firstChild.firstChild.querySelector("input[name='received']");
-    if (event.target != inputElement) {
+    let textAreaElement = lastQuerableElement.childNodes[3].firstChild.querySelector("textarea[name='comment']");
+    if (event.target == textAreaElement) {
       inputElement.value = amount
       inputElement.dispatchEvent(new InputEvent("input", {bubbles: true}));
     }
